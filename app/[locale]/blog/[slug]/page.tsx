@@ -1,4 +1,5 @@
 import { posts } from "@/content/posts";
+import getIdFromSlug from "@/helpers/getIdFromSlug";
 import { permanentRedirect, redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
@@ -45,8 +46,4 @@ export default function ProductSinglePage({
       </ul>
     </main>
   );
-}
-
-export function getIdFromSlug(slug: string) {
-  return slug.split("-").pop();
 }
