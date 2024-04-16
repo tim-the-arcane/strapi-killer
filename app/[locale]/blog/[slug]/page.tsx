@@ -4,16 +4,16 @@ import { permanentRedirect, redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
-interface ProductSinglePageProps {
+interface BlogSinglePageProps {
   params: {
     locale: string;
     slug: string;
   };
 }
 
-export default function ProductSinglePage({
+export default function BlogSinglePage({
   params: { locale, slug },
-}: ProductSinglePageProps) {
+}: BlogSinglePageProps) {
   // Get the post ID from the slug
   const id = Number(getIdFromSlug(slug));
 
