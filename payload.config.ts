@@ -6,7 +6,8 @@ import { buildConfig } from "payload/config";
 // import sharp from 'sharp'
 import { fileURLToPath } from "url";
 
-import { Users } from "./collections/Users";
+import { Posts } from "@/collections/Posts";
+import { Users } from "@/collections/Users";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -14,8 +15,11 @@ const dirname = path.dirname(filename);
 export default buildConfig({
   admin: {
     user: Users.slug,
+    livePreview: {
+      url: "http://localhost:3000",
+    },
   },
-  collections: [Users],
+  collections: [Users, Posts],
   editor: lexicalEditor({}),
   // plugins: [payloadCloud()], // TODO: Re-enable when cloud supports 3.0
   secret: process.env.PAYLOAD_SECRET || "",
@@ -27,6 +31,10 @@ export default buildConfig({
       connectionString: process.env.POSTGRES_URL || "",
     },
   }),
+  localization: {
+    locales: ["en", "de"],
+    defaultLocale: "de",
+  },
 
   // Sharp is now an optional dependency -
   // if you want to resize images, crop, set focal point, etc.

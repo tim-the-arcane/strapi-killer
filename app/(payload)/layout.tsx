@@ -11,6 +11,12 @@ type Args = {
   children: React.ReactNode;
 };
 
+export async function generateMetadata() {
+  return {
+    title: "Admin Panel",
+  };
+}
+
 const Layout = ({ children }: Args) => (
   <RootLayout config={configPromise}>{children}</RootLayout>
 );

@@ -1,3 +1,5 @@
+import "@/app/(web)/globals.css";
+
 export default function LocaleLayout({
   children,
   params: { locale },
