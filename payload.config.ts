@@ -22,14 +22,15 @@ export default buildConfig({
   collections: [Users, Posts],
   editor: lexicalEditor({}),
   // plugins: [payloadCloud()], // TODO: Re-enable when cloud supports 3.0
-  secret: process.env.PAYLOAD_SECRET || "",
+  secret: process.env.PAYLOAD_SECRET!,
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.POSTGRES_URL || "",
+      connectionString: process.env.POSTGRES_URL!,
     },
+    migrationDir: "./migrations",
   }),
   localization: {
     locales: ["en", "de"],
