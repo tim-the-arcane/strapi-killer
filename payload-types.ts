@@ -189,6 +189,11 @@ export interface Page {
   title: string;
   slug: string;
   content?: HeroBlockInterface[] | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    image?: number | Media | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
