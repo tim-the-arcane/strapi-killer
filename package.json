@@ -14,6 +14,7 @@
   "dependencies": {
     "@payloadcms/db-postgres": "3.0.0-beta.11",
     "@payloadcms/next": "3.0.0-beta.11",
+    "@payloadcms/plugin-form-builder": "3.0.0-beta.11",
     "@payloadcms/plugin-seo": "3.0.0-beta.11",
     "@payloadcms/richtext-lexical": "3.0.0-beta.11",
     "@vercel/postgres": "^0.8.0",

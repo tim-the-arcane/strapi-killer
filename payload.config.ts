@@ -1,4 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
+import formBuilder from "@payloadcms/plugin-form-builder";
 import { seo } from "@payloadcms/plugin-seo";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
@@ -28,6 +29,9 @@ export default buildConfig({
     seo({
       collections: [Posts.slug, Events.slug],
       uploadsCollection: Media.slug,
+    }),
+    formBuilder({
+      // redirectRelationships: ["pages"],
     }),
   ],
   secret: process.env.PAYLOAD_SECRET!,
