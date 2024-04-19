@@ -38,7 +38,7 @@ export default function BlogSinglePage({
   }
 
   return (
-    <main>
+    <main className="prose">
       <ul>
         <li>Id: {id}</li>
         <li>Slug: {slug}</li>
