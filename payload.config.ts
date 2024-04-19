@@ -5,6 +5,8 @@ import { buildConfig } from "payload/config";
 import sharp from "sharp";
 import { fileURLToPath } from "url";
 
+import { EventLocations } from "@/collections/EventLocations";
+import { Events } from "@/collections/Events";
 import { Media } from "@/collections/Media";
 import { Posts } from "@/collections/Posts";
 import { Users } from "@/collections/Users";
@@ -19,7 +21,7 @@ export default buildConfig({
       url: "http://localhost:3000",
     },
   },
-  collections: [Users, Posts, Media],
+  collections: [Users, Posts, Media, Events, EventLocations],
   editor: lexicalEditor({}),
   plugins: [],
   secret: process.env.PAYLOAD_SECRET!,
