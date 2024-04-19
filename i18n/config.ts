@@ -20,11 +20,11 @@ export default getRequestConfig(async ({ locale }) => {
 export const pathnames = {
   "/": "/",
   "/blog": "/blog",
+  "/blog/[slug]-[id]": "/blog/[slug]-[id]",
   "/blog/page/[page]": {
     en: "/blog/page/[page]",
     de: "/blog/seite/[page]",
   },
-  "/blog/[slug]": "/blog/[slug]",
 } satisfies Pathnames<typeof locales>;
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
