@@ -29,7 +29,7 @@ export default buildConfig({
   editor: lexicalEditor({}),
   plugins: [
     seo({
-      collections: [Posts.slug, Events.slug],
+      collections: [Posts.slug, Events.slug, Pages.slug],
       uploadsCollection: Media.slug,
     }),
     formBuilder({
