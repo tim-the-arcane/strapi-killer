@@ -18,6 +18,7 @@ export async function generateMetadata() {
 }
 
 const Layout = ({ children }: Args) => (
+  // @ts-expect-error
   <RootLayout config={configPromise}>{children}</RootLayout>
 );
 
