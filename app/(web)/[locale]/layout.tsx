@@ -1,5 +1,8 @@
 import "@/app/(web)/globals.css";
 
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+
 export default function LocaleLayout({
   children,
   params: { locale },
@@ -9,7 +12,13 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        <div className="min-h-screen grid grid-rows-[auto,1fr,auto]">
+          <Header />
+          <div>{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
