@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { getPayload } from "payload";
 import React from "react";
 
+export const revalidate = 300;
+
 const getPageBySlug = async (slug: string, locale: string) => {
   const payload = await getPayload({ config: configPromise });
   const pages = await payload.find<"pages">({
@@ -37,8 +39,8 @@ export const generateMetadata = async ({
   }
 
   return {
-    title: page.title,
-    description: "This is a dynamic page.",
+    title: page.meta?.title ?? page.title,
+    description: page.meta?.description ?? undefined,
   };
 };
 
