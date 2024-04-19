@@ -1,4 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
+// @ts-expect-error - Typings are missing for this package
 import formBuilder from "@payloadcms/plugin-form-builder";
 import { seo } from "@payloadcms/plugin-seo";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
@@ -10,6 +11,7 @@ import { fileURLToPath } from "url";
 import { EventLocations } from "@/payload/collections/EventLocations";
 import { Events } from "@/payload/collections/Events";
 import { Media } from "@/payload/collections/Media";
+import { Pages } from "@/payload/collections/Pages";
 import { Posts } from "@/payload/collections/Posts";
 import { Users } from "@/payload/collections/Users";
 
@@ -23,7 +25,7 @@ export default buildConfig({
       url: "http://localhost:3000",
     },
   },
-  collections: [Users, Posts, Media, Events, EventLocations],
+  collections: [Users, Posts, Media, Events, EventLocations, Pages],
   editor: lexicalEditor({}),
   plugins: [
     seo({
@@ -50,8 +52,8 @@ export default buildConfig({
   },
   // Seed the database with a default admin user if no users are found
   onInit: async (payload) => {
-    const users = await payload.find({
-      collection: Users.slug,
+    const users = await payload.find<"users">({
+      collection: "users",
     });
 
     if (users.docs.length === 0) {
