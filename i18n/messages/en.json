@@ -1,6 +1,9 @@
 {
-  "Index": {
-    "title": "Home",
-    "description": "Welcome to the home page"
+  "errors": {
+    "NotFound": {
+      "code": "404",
+      "title": "Page not found",
+      "description": "The page you requested could not be found."
+    }
   }
 }

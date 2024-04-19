@@ -1,6 +1,9 @@
 {
-  "Index": {
-    "title": "Startseite",
-    "description": "Willkommen auf der Startseite"
+  "errors": {
+    "NotFound": {
+      "code": "404",
+      "title": "Seite nicht gefunden",
+      "description": "Die angeforderte Seite konnte nicht gefunden werden."
+    }
   }
 }
