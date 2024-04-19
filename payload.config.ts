@@ -60,10 +60,10 @@ export default buildConfig({
         "Please change the default admin user's credentials directly after login!"
       );
 
-      payload.create({
-        collection: Users.slug,
+      await payload.create<"users">({
+        collection: "users",
         data: {
-          role: "admin",
+          roles: ["admin"],
           email: "admin@example.com",
           password: "admin",
         },
