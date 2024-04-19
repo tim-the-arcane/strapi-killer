@@ -18,13 +18,17 @@
     "@payloadcms/plugin-seo": "3.0.0-beta.11",
     "@payloadcms/richtext-lexical": "3.0.0-beta.11",
     "@vercel/postgres": "^0.8.0",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lucide-react": "^0.372.0",
     "next": "14.2.1",
     "next-intl": "^3.11.1",
     "payload": "3.0.0-beta.11",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.3",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
