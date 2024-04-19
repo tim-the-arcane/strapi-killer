@@ -57,9 +57,9 @@ export default async function DynamicPage({
     <main>
       <>
         {page?.content &&
-          page.content.map((block, index) => {
+          page.content.map((block) => {
             return (
-              <React.Fragment key={`block-${index}`}>
+              <React.Fragment key={block.id}>
                 {block.blockType === "hero" && (
                   <Hero block={block} className="py-12 bg-black text-white" />
                 )}
