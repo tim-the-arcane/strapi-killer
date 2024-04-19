@@ -1,4 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
+import { seo } from "@payloadcms/plugin-seo";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
 import { buildConfig } from "payload/config";
@@ -23,7 +24,12 @@ export default buildConfig({
   },
   collections: [Users, Posts, Media, Events, EventLocations],
   editor: lexicalEditor({}),
-  plugins: [],
+  plugins: [
+    seo({
+      collections: [Posts.slug, Events.slug],
+      uploadsCollection: Media.slug,
+    }),
+  ],
   secret: process.env.PAYLOAD_SECRET!,
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
