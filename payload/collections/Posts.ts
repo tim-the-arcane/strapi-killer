@@ -60,6 +60,7 @@ export const Posts: CollectionConfig = {
         de: "Auszug",
         en: "Excerpt",
       },
+      localized: true,
     },
     {
       name: "content",

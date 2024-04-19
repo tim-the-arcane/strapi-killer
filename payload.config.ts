@@ -49,6 +49,7 @@ export default buildConfig({
   localization: {
     locales: ["en", "de"],
     defaultLocale: "de",
+    fallback: false,
   },
   // Seed the database with a default admin user if no users are found
   onInit: async (payload) => {
