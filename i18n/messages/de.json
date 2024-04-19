@@ -1,4 +1,11 @@
 {
+  "pages": {
+    "Blog": {
+      "title": "Blog",
+      "description": "Hier findest du alle Blog-Beiträge.",
+      "noArticles": "Es gibt noch keine Blog-Beiträge."
+    }
+  },
   "errors": {
     "NotFound": {
       "code": "404",
