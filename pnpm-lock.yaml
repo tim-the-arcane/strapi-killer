@@ -14,6 +14,9 @@ importers:
       '@payloadcms/next':
         specifier: 3.0.0-beta.11
         version: 3.0.0-beta.11(@types/react@18.0.0)(bufferutil@4.0.8)(http-status@1.6.2)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0)(utf-8-validate@6.0.3)
+      '@payloadcms/plugin-seo':
+        specifier: 3.0.0-beta.11
+        version: 3.0.0-beta.11(@payloadcms/translations@3.0.0-alpha.0)(@payloadcms/ui@3.0.0-alpha.0(@types/react@18.0.0)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react@18.0.0)
       '@payloadcms/richtext-lexical':
         specifier: 3.0.0-beta.11
         version: 3.0.0-beta.11(@lexical/clipboard@0.13.1(lexical@0.13.1))(@payloadcms/next@3.0.0-beta.11(@types/react@18.0.0)(bufferutil@4.0.8)(http-status@1.6.2)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0)(utf-8-validate@6.0.3))(@payloadcms/translations@3.0.0-alpha.0)(@payloadcms/ui@3.0.0-alpha.0(@types/react@18.0.0)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(typescript@5.0.2)(yjs@13.6.14)
@@ -942,6 +945,14 @@ packages:
       http-status: 1.6.2
       next: ^14.2.0-canary.23
       payload: 3.0.0-beta.11
+
+  '@payloadcms/plugin-seo@3.0.0-beta.11':
+    resolution: {integrity: sha512-QsvhamLPXBEm8u20KaKuBOXuHUdeuRzf5Q9XZ5ep/xZnVO2j4GNTV6sFQ5Ah4aL5rC0QDH7OpWCzzOco0TUYBQ==}
+    peerDependencies:
+      '@payloadcms/translations': 3.0.0-beta.11
+      '@payloadcms/ui': 3.0.0-beta.11
+      payload: 3.0.0-beta.11
+      react: ^18.0.0
 
   '@payloadcms/richtext-lexical@3.0.0-beta.11':
     resolution: {integrity: sha512-nTjvycUhGeUjXgj3UkZw1d5/NhPbydUeBjx0lgGsgNbHGUkezXi8TIiKXC7PFLBbTchAL10lhF2H+QFw3OcTtg==}
@@ -4491,6 +4502,13 @@ snapshots:
       - react-native
       - scheduler
       - utf-8-validate
+
+  '@payloadcms/plugin-seo@3.0.0-beta.11(@payloadcms/translations@3.0.0-alpha.0)(@payloadcms/ui@3.0.0-alpha.0(@types/react@18.0.0)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react@18.0.0)':
+    dependencies:
+      '@payloadcms/translations': 3.0.0-alpha.0
+      '@payloadcms/ui': 3.0.0-alpha.0(@types/react@18.0.0)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0)
+      payload: 3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6)
+      react: 18.0.0
 
   '@payloadcms/richtext-lexical@3.0.0-beta.11(@lexical/clipboard@0.13.1(lexical@0.13.1))(@payloadcms/next@3.0.0-beta.11(@types/react@18.0.0)(bufferutil@4.0.8)(http-status@1.6.2)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0)(utf-8-validate@6.0.3))(@payloadcms/translations@3.0.0-alpha.0)(@payloadcms/ui@3.0.0-alpha.0(@types/react@18.0.0)(monaco-editor@0.38.0)(next@14.2.1(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(sass@1.75.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(scheduler@0.23.0))(payload@3.0.0-beta.11(@swc/core@1.4.14(@swc/helpers@0.5.5))(@swc/types@0.1.6))(typescript@5.0.2)(yjs@13.6.14)':
     dependencies:
