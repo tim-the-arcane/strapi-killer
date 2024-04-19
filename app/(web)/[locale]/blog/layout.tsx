@@ -19,7 +19,7 @@ export default function BlogLayout({
 
   return (
     <div className="h-full container grid grid-cols-[1fr,minmax(250px,_auto)] gap-8">
-      <main>
+      <main className="flex flex-col gap-8">
         <div className="bg-black text-white p-8 rounded-xl">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl">{t("title")}</h1>
