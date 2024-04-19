@@ -48,5 +48,29 @@ export default buildConfig({
     locales: ["en", "de"],
     defaultLocale: "de",
   },
+  // Seed the database with a default admin user if no users are found
+  onInit: async (payload) => {
+    const users = await payload.find({
+      collection: Users.slug,
+    });
+
+    if (users.docs.length === 0) {
+      console.info("No users found, creating default admin user.");
+      console.warn(
+        "Please change the default admin user's credentials directly after login!"
+      );
+
+      payload.create({
+        collection: Users.slug,
+        data: {
+          role: "admin",
+          email: "admin@example.com",
+          password: "admin",
+        },
+      });
+
+      console.info("Default admin user created.");
+    }
+  },
   sharp,
 });
