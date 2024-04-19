@@ -7,11 +7,11 @@ import { buildConfig } from "payload/config";
 import sharp from "sharp";
 import { fileURLToPath } from "url";
 
-import { EventLocations } from "@/collections/EventLocations";
-import { Events } from "@/collections/Events";
-import { Media } from "@/collections/Media";
-import { Posts } from "@/collections/Posts";
-import { Users } from "@/collections/Users";
+import { EventLocations } from "@/payload/collections/EventLocations";
+import { Events } from "@/payload/collections/Events";
+import { Media } from "@/payload/collections/Media";
+import { Posts } from "@/payload/collections/Posts";
+import { Users } from "@/payload/collections/Users";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
