@@ -23,24 +23,43 @@ export const Posts: CollectionConfig = {
   },
   fields: [
     {
-      name: "title",
-      label: {
-        de: "Titel",
-        en: "Title",
-      },
-      type: "text",
-      required: true,
-      localized: true,
+      type: "row",
+      fields: [
+        {
+          name: "title",
+          label: {
+            de: "Titel",
+            en: "Title",
+          },
+          type: "text",
+          required: true,
+          localized: true,
+          admin: {
+            width: "70%",
+          },
+        },
+        {
+          name: "slug",
+          label: {
+            de: "Slug",
+            en: "Slug",
+          },
+          type: "text",
+          required: true,
+          localized: true,
+          admin: {
+            width: "30%",
+          },
+        },
+      ],
     },
     {
-      name: "slug",
+      type: "textarea",
+      name: "excerpt",
       label: {
-        de: "Slug",
-        en: "Slug",
+        de: "Auszug",
+        en: "Excerpt",
       },
-      type: "text",
-      required: true,
-      localized: true,
     },
     {
       name: "content",

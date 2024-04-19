@@ -32,6 +32,9 @@ importers:
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
+      html-parser.ts:
+        specifier: ^1.9.1
+        version: 1.9.1
       lucide-react:
         specifier: ^0.372.0
         version: 0.372.0(react@18.0.0)
@@ -2233,6 +2236,9 @@ packages:
 
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+
+  html-parser.ts@1.9.1:
+    resolution: {integrity: sha512-XXRy1ZgEf+Xd1Sj5XwZ0eKvhuTALbvnj/06lgDCavlobf2NI/FwhVx/MrhECQ4oIQxJ4E92kw3s/vNT64+xFsA==}
 
   http-status@1.6.2:
     resolution: {integrity: sha512-oUExvfNckrpTpDazph7kNG8sQi5au3BeTo0idaZFXEhTaJKu7GNJCLHI0rYY2wljm548MSTM+Ljj/c6anqu2zQ==}
@@ -6134,6 +6140,8 @@ snapshots:
   hoist-non-react-statics@3.3.2:
     dependencies:
       react-is: 16.13.1
+
+  html-parser.ts@1.9.1: {}
 
   http-status@1.6.2: {}
 
