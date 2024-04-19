@@ -1,21 +1,6 @@
 import getIdFromSlug from "@/helpers/getIdFromSlug";
-import configPromise from "@payload-config";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getPayload } from "payload";
-
-const getPostById = async (id: number, locale: "de" | "en") => {
-  const payload = await getPayload({ config: configPromise });
-
-  try {
-    return await payload.findByID<"posts">({
-      collection: "posts",
-      id,
-      locale,
-    });
-  } catch (error) {
-    return null;
-  }
-};
+import { getPostById } from "../getPostById";
 
 interface BlogSinglePageProps {
   params: {
