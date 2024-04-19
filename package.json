@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:docker": "docker run --name strapi-killer-db -e POSTGRES_PASSWORD=strapi-killer -e POSTGRES_USER=strapi-killer -e POSTGRES_DB=strapi-killer -p 5432:5432 -v strapi-killer-db:/var/lib/postgresql/data -d postgres"
+    "db:docker": "docker run --name strapi-killer-db -e POSTGRES_PASSWORD=strapi-killer -e POSTGRES_USER=strapi-killer -e POSTGRES_DB=strapi-killer -p 5432:5432 -v strapi-killer-db:/var/lib/postgresql/data -d postgres",
+    "migrate:up": "payload migrate",
+    "migrate:down": "payload migrate:down"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.0.0-beta.11",
