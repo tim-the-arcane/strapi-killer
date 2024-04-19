@@ -26,7 +26,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN corepack enable pnpm && pnpm run build
+RUN corepack enable pnpm && pnpm run build && pnpm payload migrate
 
 # Production image, copy all the files and run next
 FROM base AS runner
