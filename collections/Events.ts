@@ -1,3 +1,17 @@
+import {
+  AlignFeature,
+  BlockQuoteFeature,
+  BoldFeature,
+  HeadingFeature,
+  ItalicFeature,
+  LinkFeature,
+  OrderedListFeature,
+  ParagraphFeature,
+  UnderlineFeature,
+  UnorderedListFeature,
+  UploadFeature,
+  lexicalEditor,
+} from "@payloadcms/richtext-lexical";
 import { CollectionConfig } from "payload/types";
 
 export const Events: CollectionConfig = {
@@ -11,38 +25,40 @@ export const Events: CollectionConfig = {
   },
   fields: [
     {
-      type: "row",
-      fields: [
-        {
-          name: "title",
-          type: "text",
-          required: true,
-          localized: true,
-          admin: {
-            width: "70%",
-          },
-        },
-        {
-          name: "slug",
-          type: "text",
-          required: true,
-          unique: true,
-          hooks: {
-            beforeChange: [
-              ({ siblingData, value }) => {
-                if (!value) {
-                  return siblingData.title.toLowerCase().replace(/\s+/g, "-");
-                }
+      name: "title",
+      type: "text",
+      required: true,
+      localized: true,
+    },
+    {
+      name: "slug",
+      type: "text",
+      required: true,
+      unique: true,
+      hooks: {
+        beforeChange: [
+          ({ siblingData, value }) => {
+            if (!value) {
+              return siblingData.title.toLowerCase().replace(/\s+/g, "-");
+            }
 
-                return value;
-              },
-            ],
+            return value;
           },
-          admin: {
-            width: "30%",
-          },
-        },
-      ],
+        ],
+      },
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
+      name: "featuredImage",
+      type: "upload",
+      relationTo: "media",
+      required: true,
+      localized: true,
+      admin: {
+        position: "sidebar",
+      },
     },
     {
       type: "row",
@@ -91,13 +107,25 @@ export const Events: CollectionConfig = {
       name: "content",
       type: "richText",
       localized: true,
-    },
-    {
-      name: "featuredImage",
-      type: "upload",
-      relationTo: "media",
-      required: true,
-      localized: true,
+      editor: lexicalEditor({
+        features: [
+          BoldFeature({}),
+          ItalicFeature({}),
+          UnderlineFeature({}),
+          ParagraphFeature({}),
+          HeadingFeature({
+            enabledHeadingSizes: ["h2", "h3", "h4", "h5", "h6"],
+          }),
+          AlignFeature({}),
+          UnorderedListFeature({}),
+          OrderedListFeature({}),
+          LinkFeature({}),
+          BlockQuoteFeature({}),
+          UploadFeature({
+            collection: "media",
+          }),
+        ],
+      }),
     },
     {
       name: "location",
