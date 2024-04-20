@@ -12,11 +12,11 @@ WORKDIR /app
 # Fetch dependencies
 COPY pnpm-lock.yaml ./
 
-RUN corepack enable pnpm && pnpm fetch --prod
+RUN corepack enable pnpm && pnpm fetch
 
 # Install dependencies
 ADD . ./
-RUN pnpm install -r --offline --prod
+RUN pnpm install -r --offline
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -59,4 +59,4 @@ ENV PORT 3000
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
-CMD HOSTNAME="0.0.0.0" npm run migrate:up && node server.js
+CMD HOSTNAME="0.0.0.0" npx payload@beta migrate && node server.js
