@@ -6,19 +6,19 @@ settings:
 
 dependencies:
   '@payloadcms/db-postgres':
-    specifier: 3.0.0-beta.11
+    specifier: beta
     version: 3.0.0-beta.11(@types/react@18.2.79)(@vercel/postgres@0.8.0)(payload@3.0.0-beta.11)(react@18.2.0)
   '@payloadcms/next':
-    specifier: 3.0.0-beta.11
+    specifier: beta
     version: 3.0.0-beta.11(@types/react@18.2.79)(http-status@1.6.2)(monaco-editor@0.47.0)(next@14.2.1)(payload@3.0.0-beta.11)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
   '@payloadcms/plugin-form-builder':
-    specifier: 3.0.0-beta.11
+    specifier: beta
     version: 3.0.0-beta.11(@types/react@18.2.79)(monaco-editor@0.47.0)(next@14.2.1)(payload@3.0.0-beta.11)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
   '@payloadcms/plugin-seo':
-    specifier: 3.0.0-beta.11
+    specifier: beta
     version: 3.0.0-beta.11(@payloadcms/translations@3.0.0-beta.11)(@payloadcms/ui@3.0.0-beta.11)(payload@3.0.0-beta.11)(react@18.2.0)
   '@payloadcms/richtext-lexical':
-    specifier: 3.0.0-beta.11
+    specifier: beta
     version: 3.0.0-beta.11(@lexical/clipboard@0.13.1)(@payloadcms/next@3.0.0-beta.11)(@payloadcms/translations@3.0.0-beta.11)(@payloadcms/ui@3.0.0-beta.11)(payload@3.0.0-beta.11)(typescript@5.4.5)(yjs@13.6.14)
   '@vercel/postgres':
     specifier: ^0.8.0
