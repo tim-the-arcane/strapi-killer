@@ -1,4 +1,4 @@
-import getIdFromSlug from "@/helpers/getIdFromSlug";
+import getIdFromSlug from "@/lib/getIdFromSlug";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getPostById } from "../getPostById";
 
