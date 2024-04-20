@@ -107,25 +107,7 @@ export const Events: CollectionConfig = {
       name: "content",
       type: "richText",
       localized: true,
-      editor: lexicalEditor({
-        features: [
-          BoldFeature({}),
-          ItalicFeature({}),
-          UnderlineFeature({}),
-          ParagraphFeature({}),
-          HeadingFeature({
-            enabledHeadingSizes: ["h2", "h3", "h4", "h5", "h6"],
-          }),
-          AlignFeature({}),
-          UnorderedListFeature({}),
-          OrderedListFeature({}),
-          LinkFeature({}),
-          BlockQuoteFeature({}),
-          UploadFeature({
-            collection: "media",
-          }),
-        ],
-      }),
+      editor: lexicalEditor({}),
     },
     {
       name: "location",
@@ -146,16 +128,6 @@ export const Events: CollectionConfig = {
         },
       ],
     },
-    // {
-    //   name: "seoTitle",
-    //   type: "text",
-    //   localized: true,
-    // },
-    // {
-    //   name: "seoDesc",
-    //   type: "text",
-    //   localized: true,
-    // },
     // {
     //   name: "signupForm",
     //   type: "relationship",
