@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/config";
-import { extractExcerpt } from "@/lib/extractExcerpt";
 import type { Post } from "@/payload-types";
+import { extractExcerpt } from "html-excerpt-extractor";
 import { useTranslations } from "next-intl";
 
 interface PostListProps {
@@ -38,9 +38,7 @@ export default function PostList({ posts, locale }: PostListProps) {
               {/* If neither excerpt nor meta description are available, generate the excerpt from the content */}
               {!post?.excerpt &&
                 !post.meta?.description &&
-                post.content_html && (
-                  <p>{extractExcerpt(post.content_html, undefined, "words")}</p>
-                )}
+                post.content_html && <p>{extractExcerpt(post.content_html)}</p>}
 
               {/* @ts-expect-error - i18n config needs fixing */}
               <Link href={`/blog/${post.slug}-${post.id}`} locale={locale}>
